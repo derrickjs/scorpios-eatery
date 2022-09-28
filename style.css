@@ -13,6 +13,7 @@ body{
 	margin-bottom: 5%;
 	min-height: 400px;
 
+
 }
 
 /* header section starts */
@@ -23,6 +24,7 @@ li, a , button {
 	color: lightslategray;
 	text-decoration: none;
 	list-style-type: none;
+	
 
 }
 
@@ -69,17 +71,142 @@ header {
     border-radius: 50%;
 }
 
- .nav-link li a:visited {
-    color: red;
-    
-}
-
-
-
-
-
-
 /* header section ends */
+
+
+
+
+
+/* content starts */
+
+
+/* content ends */
+
+.content {
+	display: grid;
+	position: inline-block;
+	grid-template-columns: 3fr 2fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 2%;
+	grid-row-gap: 0px;
+	height:95vh;
+	
+	
+	}
+  
+    h2{
+        margin: 0 auto;
+        padding: 3% 0;
+
+        
+    }
+
+    
+
+    .history{
+        
+        padding-left: 4%; 
+        font-size: 1.5rem;
+    }
+
+    p{
+        text-indent: 5%;
+        
+    }
+  
+	a{
+		font-size: 1.5rem;
+	}
+
+	p a{
+		color:blue;
+	}
+
+	a + a:visited{
+		color: purple;
+		/* contains sibling and visited so first link in the <p> will not show as visited but the second one will. */
+	}
+
+	a[target = "_blank"]{
+		color:red;
+		text-decoration: underline;
+	}
+
+	.history p:last-child{
+		padding-bottom: 2%;
+		border-bottom: 2px solid black;
+	}
+
+
+
+
+
+    /* menu */
+
+    .sample{ 
+	
+        width:100%;
+        font-size:1.2em;
+        text-align:center;
+        vertical-align: top;
+        float:right;
+		margin-bottom: 5%;
+	
+		
+        
+        
+      }
+      
+      .bigger{
+        font-size:2em;
+        color: #514e40;
+      }
+      
+      .menuitem{
+        margin:3%;
+       
+        
+      }
+      
+      hr{
+        width: 50%;
+        height:4px;
+        margin: 5% auto;
+        background: black;
+        
+        }
+
+		.history p:first-of-type{
+
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			font-size: 1.4rem;
+
+		}
+
+	.history p::before{
+		content: "";
+		background: red;
+		border-radius: 50%;
+		display: inline-block;
+		width: 15px;
+		height:15px;
+		margin-right: 2%;
+	}
+      
+	.history p::after{
+		content: "";
+		background: red;
+		border-radius: 50%;
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-left:2%;
+	}
+      
+
+
+
+
 
 /* footer begins */
 
@@ -121,3 +248,42 @@ footer {
 
      
 	 /* footer ends */
+
+	 @media only screen and (max-width: 768px) {
+		/* For mobile phones: */
+		.content {
+			display:block;
+		  	width: 100%;
+		}
+
+		.logo{
+			display: block;
+			margin:0 auto;
+		}
+		header{
+			display: block;
+			background-color: black;
+
+
+		}
+
+		ul.nav-link{
+			padding:0;
+			text-align: center;
+		}
+
+		footer{
+			height:5vmax;
+		}
+
+		.nav-link li a:hover{
+			color:black;
+			background-color: white;
+		}
+
+		li, a , button{
+			color:white;
+		}
+
+		
+	  }
